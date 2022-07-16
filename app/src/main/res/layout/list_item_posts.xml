@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:clipChildren="false"
     android:clipToPadding="false"
+    android:paddingBottom="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="center"
+            android:layout_marginTop="16dp"
             tools:src="@drawable/ic_launcher_background"
             app:layout_constraintTop_toBottomOf="@id/tvAuthorNamePostItem"
             android:id="@+id/imageViewPostItem"/>
@@ -57,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:id="@+id/tvMenuTypePostItem"
             app:layout_constraintBottom_toBottomOf="@id/imageViewIsPartnerPostItem"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -64,16 +67,19 @@
             app:layout_constraintTop_toTopOf="@id/imageViewIsPartnerPostItem"
             tools:text="farid solgi" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvDocsTextPostItem"
-                app:layout_constraintTop_toBottomOf="@id/tvManufacturerNamePostItem"
-                android:layout_margin="16dp"
-                tools:text="fjaoisfj afijafl ja fjaf jiao jao fija oifjaof jaf
-                jao fjao fijao fjia ofjaof ijfaiof afja kjfahkj fakjf"/>
+        <TextView
+            android:id="@+id/tvDocsTextPostItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
 
-    <ImageButton
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvManufacturerNamePostItem"
+            tools:text="fjaoisfj afijafl ja fjaf jiao jao fija oifjaof jjao fjao fijao fjia ofjaof ijfaiof afja kjfahkj fakjf" />
+
+        <ImageButton
         android:layout_width="48dp"
         android:layout_height="48dp"
         tools:text="0"
