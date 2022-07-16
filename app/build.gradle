@@ -60,6 +60,13 @@ dependencies {
     // Retrofit Gson converter
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
+    //kotlin coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+
+
+// LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0"
 }
 kapt {
     correctErrorTypes = true
