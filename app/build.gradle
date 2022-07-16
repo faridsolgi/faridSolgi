@@ -67,6 +67,9 @@ dependencies {
 
 // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0"
+
+    //Viewmodel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
 }
 kapt {
     correctErrorTypes = true
