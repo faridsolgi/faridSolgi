@@ -58,21 +58,23 @@ class PostAdapter
         }
 
         fun  bindItem(docsItem :DocsItem){
-            if (docsItem.media.size>0){
-                if (docsItem.media[0].mediaType.equals("image")){
-                    authorName.text= docsItem.author.name
-                    Picasso.get()
-                        .load(docsItem.media[0].url)
-                        .into(postImage)
-                    if (docsItem.manufacturer.isPartner)
-                        isPartner.visibility= View.VISIBLE
-                    else
-                        isPartner.visibility = View.INVISIBLE
-                    manufacturerName.text= docsItem.manufacturer.name
-                    menuType.text=docsItem.manuType
-                    textBody.text=docsItem.text
-                }
-            }
+       try {
+           if (docsItem.manufacturer.isPartner)
+               isPartner.visibility= View.VISIBLE
+           else
+               isPartner.visibility = View.INVISIBLE
+           manufacturerName.text= docsItem.manufacturer.name
+           menuType.text=docsItem.manuType
+           textBody.text=docsItem.text
+           authorName.text= docsItem.author.name
+           Picasso.get()
+               .load(docsItem.media[0].url)
+               .into(postImage)
+
+       }catch (e: Exception){
+           e.printStackTrace()
+       }
+
 
             }
 

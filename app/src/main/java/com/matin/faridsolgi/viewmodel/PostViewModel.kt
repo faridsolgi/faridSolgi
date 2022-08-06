@@ -10,7 +10,7 @@ import javax.inject.Inject
 class PostViewModel
     @Inject constructor( postRepository: PostRepository) : ViewModel() {
 
-        val PostsLiveData :LiveData<Posts> = postRepository.getPosts(1,30).asLiveData()
+        val postsLiveData :LiveData<Posts> = postRepository.getPosts(1,6).asLiveData()
 
 
 }
